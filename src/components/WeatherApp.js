@@ -52,7 +52,7 @@ export const WeatherApp = () => {
             <h3>{weatherData.sys?.country}</h3>
             <div className='center'>
                 <img src={`http://openweathermap.org/img/wn/${weatherData.weather?.[0].icon}@2x.png`}></img>
-                <p>{degrees} {isCelsius? '°C' : '°F'}</p>
+                <p>{degrees} <span>{isCelsius? '°C' : '°F'}</span></p>
             </div>
             <button onClick={convert}>To {isCelsius? 'fahrenheit' : 'celsius'}</button>
         </div>
